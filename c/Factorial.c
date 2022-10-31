@@ -1,14 +1,14 @@
-void fact(int n)
-{
-	int i,f=1;
-	for(i=1;i<=n;i++)
-		f=f*i;
-	printf("Factorial=%d",f);
+#include <stdio.h>
+int fat (n) {
+    if ((n==1) || (n==0)){
+        return 1;
+   } else{
+      return fat(n-1)*n;
+      }
 }
-main()
-{
-		int n;
-		scanf("%d",&n);
-		fact(n);
+int main () {
+    int n;
+    printf("Enter an integer: ");
+    scanf("%d",&n);
+    printf("%d! = %d \n",n,fat (n));
 }
-	
